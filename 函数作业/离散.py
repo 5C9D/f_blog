@@ -46,10 +46,21 @@ def dcif():
 from tkinter import *
 root = Tk()
 root.title("离散信号图像")
-
-Button(root,text="离散sin",command=dcsin).pack(side=LEFT)
-Button(root,text="离散e^x",command=dcex).pack(side=LEFT)
-Button(root,text="离散阶跃",command=dcsf).pack(side=LEFT)
-Button(root,text="离散冲击",command=dcif).pack(side=RIGHT)
-
+root.geometry("225x60+100+100")  
+btn01 = Button(root)
+btn02 = Button(root)
+btn03 = Button(root)
+btn04 = Button(root)
+btn01["text"] = "离散sin"
+btn02["text"] = "离散e^x"
+btn03["text"] = "离散阶跃"
+btn04["text"] = "离散冲击"
+btn01["command"] = dcsin
+btn02["command"] = dcex
+btn03["command"] = dcsf
+btn04["command"] = dcif
+btn01.pack(side=LEFT)
+btn02.pack(side=LEFT)
+btn03.pack(side=LEFT)
+btn04.pack(side=LEFT)
 root.mainloop()
